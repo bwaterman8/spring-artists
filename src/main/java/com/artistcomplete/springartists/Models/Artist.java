@@ -18,6 +18,7 @@ public class Artist {
     @ManyToMany(mappedBy = "artists")
     private Set<Album> albums = new HashSet<>();
 
+
     public Artist() {
     }
 

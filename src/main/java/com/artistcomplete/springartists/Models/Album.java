@@ -13,6 +13,9 @@ public class Album {
     private Long id;
 
     private String title;
+
+    @OneToMany
+    @JoinColumn(name = "album_id")
     private Set<Song> songs = new HashSet<>();
 
     @ManyToMany

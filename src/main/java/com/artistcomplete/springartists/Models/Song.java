@@ -1,9 +1,6 @@
 package com.artistcomplete.springartists.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,8 +13,9 @@ public class Song {
 
     private String title;
     private int length;
+
+    @ManyToOne
     private Set<Album> albums = new HashSet<>();
-    private Set<Artist> artists = new HashSet<>();
 
     public Song() {
     }
@@ -59,11 +57,4 @@ public class Song {
         this.albums = albums;
     }
 
-    public Set<Artist> getArtists() {
-        return artists;
-    }
-
-    public void setArtists(Set<Artist> artists) {
-        this.artists = artists;
-    }
 }
