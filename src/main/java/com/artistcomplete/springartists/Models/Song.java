@@ -12,7 +12,7 @@ public class Song {
     private Long id;
 
     private String title;
-    private int length;
+    private String length;
 
     @ManyToOne
     private Set<Album> albums = new HashSet<>();
@@ -20,7 +20,7 @@ public class Song {
     public Song() {
     }
 
-    public Song(String title, int length) {
+    public Song(String title, String length) {
         this.title = title;
         this.length = length;
     }
@@ -41,11 +41,11 @@ public class Song {
         this.title = title;
     }
 
-    public int getLength() {
+    public String getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(String  length) {
         this.length = length;
     }
 
