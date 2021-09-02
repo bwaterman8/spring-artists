@@ -40,9 +40,15 @@ public class BootStrapData implements CommandLineRunner {
         donda.getSongs().add(dondaChant);
         donda.getSongs().add(jail);
 
+        dondaChant.setAlbum(donda);
+        jail.setAlbum(donda);
+
         graduation.getArtists().add(kanye);
         graduation.getSongs().add(goodMorning);
         graduation.getSongs().add(stronger);
+
+        goodMorning.setAlbum(graduation);
+        stronger.setAlbum(graduation);
 
         artistRepository.save(kanye);
         albumRepository.save(donda);
@@ -69,15 +75,15 @@ public class BootStrapData implements CommandLineRunner {
         room.getSongs().add(reptilla);
         room.getSongs().add(control);
 
-        reptilla.getAlbums().add(room);
-        control.getAlbums().add(room);
+        reptilla.setAlbum(room);
+        control.setAlbum(room);
 
         isThis.getArtists().add(strokes);
         isThis.getSongs().add(someday);
         isThis.getSongs().add(nite);
 
-        someday.getAlbums().add(isThis);
-        nite.getAlbums().add(isThis);
+        someday.setAlbum(isThis);
+        nite.setAlbum(isThis);
 
         artistRepository.save(strokes);
         albumRepository.save(room);

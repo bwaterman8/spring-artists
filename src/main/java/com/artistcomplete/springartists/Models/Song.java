@@ -16,7 +16,7 @@ public class Song {
     private String length;
 
     @ManyToOne
-    private Set<Album> albums = new HashSet<>();
+    private Album album;
 
     public Song() {
     }
@@ -50,12 +50,12 @@ public class Song {
         this.length = length;
     }
 
-    public Set<Album> getAlbums() {
-        return albums;
+    public Album getAlbum() {
+        return album;
     }
 
-    public void setAlbums(Set<Album> albums) {
-        this.albums = albums;
+    public void setAlbum(Album album) {
+        this.album = album;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Song {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", length='" + length + '\'' +
-                ", albums=" + albums +
+                ", albums=" + album +
                 '}';
     }
 

@@ -15,7 +15,7 @@ public class Album {
 
     private String title;
 // mapped by is the change
-    @OneToMany(mappedBy = "albums")
+    @OneToMany
     @JoinColumn(name = "album_id")
     private Set<Song> songs = new HashSet<>();
 
