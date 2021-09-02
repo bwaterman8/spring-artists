@@ -16,7 +16,6 @@ public class Song {
     private String length;
 
     @ManyToOne
-    @JoinColumn()
     private Set<Album> albums = new HashSet<>();
 
     public Song() {
