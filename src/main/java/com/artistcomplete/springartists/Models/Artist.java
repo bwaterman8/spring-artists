@@ -1,9 +1,6 @@
 package com.artistcomplete.springartists.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,6 +14,8 @@ public class Artist {
     private String name;
     private int age;
     private String origin;
+
+    @ManyToMany(mappedBy = "artists")
     private Set<Album> albums = new HashSet<>();
 
     public Artist() {
