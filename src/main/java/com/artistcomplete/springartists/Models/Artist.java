@@ -1,6 +1,4 @@
 package com.artistcomplete.springartists.Models;
 
-
-public class Album {
-
+public class Artist {
 }
