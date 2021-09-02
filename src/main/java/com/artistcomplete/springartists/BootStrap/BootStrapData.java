@@ -26,10 +26,11 @@ public class BootStrapData implements CommandLineRunner {
         Artist kanye = new Artist("Kanye West", 43, "Chicago");
 
         Album donda = new Album("donda");
+        albumRepository.save(donda);
         Song dondaChant = new Song("donda", "2:09");
         Song jail = new Song("jail", "4:57");
-
         Album graduation = new Album("graduation");
+        albumRepository.save(graduation);
         Song goodMorning = new Song("good morning", "3:15");
         Song stronger = new Song("stronger", "5:12");
 
@@ -61,10 +62,12 @@ public class BootStrapData implements CommandLineRunner {
         Artist strokes = new Artist("the strokes", 12, "New York");
 
         Album room = new Album("room on fire");
+        albumRepository.save(room);
         Song reptilla = new Song("reptilla", "3:35");
         Song control = new Song("under control", "3:02");
 
         Album isThis = new Album("is this it");
+        albumRepository.save(isThis);
         Song someday = new Song("someday", "3:03");
         Song nite = new Song("last night", "3:13");
 
