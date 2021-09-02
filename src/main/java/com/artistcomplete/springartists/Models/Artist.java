@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -16,16 +17,15 @@ public class Artist {
     private String name;
     private int age;
     private String origin;
-    private Set<Album> albums;
+    private Set<Album> albums = new HashSet<>();
 
     public Artist() {
     }
 
-    public Artist(String name, int age, String origin, Set<Album> albums) {
+    public Artist(String name, int age, String origin) {
         this.name = name;
         this.age = age;
         this.origin = origin;
-        this.albums = albums;
     }
 
     public Long getId() {

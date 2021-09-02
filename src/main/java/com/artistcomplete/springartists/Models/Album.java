@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -15,16 +16,14 @@ public class Album {
     private Long id;
 
     private String title;
-    private Set<Song> songs;
-    private Set<Artist> artists;
+    private Set<Song> songs = new HashSet<>();
+    private Set<Artist> artists = new HashSet<>();
 
     public Album() {
     }
 
-    public Album(String title, Set<Song> songs, Set<Artist> artists) {
+    public Album(String title) {
         this.title = title;
-        this.songs = songs;
-        this.artists = artists;
     }
 
     public Long getId() {
