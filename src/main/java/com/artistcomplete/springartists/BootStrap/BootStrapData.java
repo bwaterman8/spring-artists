@@ -86,5 +86,10 @@ public class BootStrapData implements CommandLineRunner {
         songRepository.save(control);
         songRepository.save(someday);
         songRepository.save(nite);
+
+        System.out.println("started in spring boot");
+        System.out.println("number of artists: " + artistRepository.count());
+        System.out.println("number of albums: " + albumRepository.count());
+        System.out.println("number of songs: " + songRepository.count());
     }
 }
