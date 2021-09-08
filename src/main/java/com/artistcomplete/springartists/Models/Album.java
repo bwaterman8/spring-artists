@@ -2,6 +2,7 @@ package com.artistcomplete.springartists.Models;
 
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -16,7 +17,7 @@ public class Album {
     private String title;
 // mapped by is the change
     @OneToMany(mappedBy = "album")
-    private Set<Song> songs = new HashSet<>();
+    private Collection<Song> songs;
 
 //    @ManyToMany
 //    @JoinTable(name = "artist_book", joinColumns = @JoinColumn(name = "album_id"),
@@ -48,11 +49,11 @@ public class Album {
         this.title = title;
     }
 
-    public Set<Song> getSongs() {
+    public Collection<Song> getSongs() {
         return songs;
     }
 
-    public void setSongs(Set<Song> songs) {
+    public void setSongs(Collection<Song> songs) {
         this.songs = songs;
     }
 
