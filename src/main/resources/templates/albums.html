@@ -16,7 +16,7 @@
         <tr th:each="album : ${albums}">
             <th th:text = ${album.id}>123</th>
             <th th:text = ${album.title}>Room on Fire</th>
-            <th th:text = ${album.artist.name}>The Strokes</th>
+            <th th:text = ${album.artists.name}>The Strokes</th>
         </tr>
     </table>
 </body>

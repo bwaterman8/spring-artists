@@ -16,7 +16,8 @@ public class Artist {
     private int age;
     private String origin;
 
-    @ManyToMany(mappedBy = "artists")
+//    @ManyToMany(mappedBy = "artists")
+    @OneToMany(mappedBy = "artist")
     private Set<Album> albums = new HashSet<>();
 
 

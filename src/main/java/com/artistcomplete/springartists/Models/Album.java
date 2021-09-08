@@ -18,10 +18,12 @@ public class Album {
     @OneToMany(mappedBy = "album")
     private Set<Song> songs = new HashSet<>();
 
-    @ManyToMany
-    @JoinTable(name = "artist_book", joinColumns = @JoinColumn(name = "album_id"),
-            inverseJoinColumns = @JoinColumn(name = "artist_id"))
-    private Set<Artist> artists = new HashSet<>();
+//    @ManyToMany
+//    @JoinTable(name = "artist_book", joinColumns = @JoinColumn(name = "album_id"),
+//            inverseJoinColumns = @JoinColumn(name = "artist_id"))
+//    private Set<Artist> artists = new HashSet<>();
+    @ManyToOne
+    private Artist artist;
 
     public Album() {
     }
@@ -54,13 +56,21 @@ public class Album {
         this.songs = songs;
     }
 
-    public Set<Artist> getArtists() {
-        return artists;
+    public Artist getArtist() {
+        return artist;
     }
 
-    public void setArtists(Set<Artist> artists) {
-        this.artists = artists;
+    public void setArtist(Artist artist) {
+        this.artist = artist;
     }
+
+    //    public Set<Artist> getArtists() {
+//        return artists;
+//    }
+//
+//    public void setArtists(Set<Artist> artists) {
+//        this.artists = artists;
+//    }
 
     @Override
     public String toString() {
@@ -68,7 +78,7 @@ public class Album {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", songs=" + songs +
-                ", artists=" + artists +
+                ", artist=" + artist +
                 '}';
     }
 
