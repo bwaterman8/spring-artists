@@ -10,12 +10,12 @@
         <tr>
             <th>ID</th>
             <th>Title</th>
-            <th>Artist</th>
+            <th>Album</th>
         </tr>
         <tr th:each="song : ${songs}">
             <th th:text = ${song.id}>123</th>
-            <th th:text = ${song.title}>Room on Fire</th>
-            <th th:text = ${song.artist.name}>The Strokes</th>
+            <th th:text = ${song.title}>Reptilla</th>
+            <th th:text = ${song.album.title}>Room on Fire</th>
         </tr>
     </table>
 </body>
