@@ -64,7 +64,6 @@ public class Song {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", length='" + length + '\'' +
-                ", albums=" + album +
                 '}';
     }
 

@@ -77,7 +77,6 @@ public class Artist {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", origin='" + origin + '\'' +
-                ", albums=" + albums +
                 '}';
     }
 

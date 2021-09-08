@@ -77,8 +77,6 @@ public class Album {
         return "Album{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", songs=" + songs +
-                ", artist=" + artist +
                 '}';
     }
 
