@@ -17,7 +17,7 @@ public class Album {
     private String title;
 // mapped by is the change
     @OneToMany(mappedBy = "album")
-    private Collection<Song> songs;
+    private Set<Song> songs = new HashSet<>();
 
 //    @ManyToMany
 //    @JoinTable(name = "artist_book", joinColumns = @JoinColumn(name = "album_id"),
@@ -49,13 +49,14 @@ public class Album {
         this.title = title;
     }
 
-    public Collection<Song> getSongs() {
+    public Set<Song> getSongs() {
         return songs;
     }
 
-    public void setSongs(Collection<Song> songs) {
+    public void setSongs(Set<Song> songs) {
         this.songs = songs;
     }
+
 
     public Artist getArtist() {
         return artist;

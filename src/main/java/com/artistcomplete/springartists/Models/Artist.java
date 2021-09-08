@@ -19,7 +19,7 @@ public class Artist {
 
 //    @ManyToMany(mappedBy = "artists")
     @OneToMany(mappedBy = "artist")
-    private Collection<Album> albums;
+    private Set<Album> albums = new HashSet<>();
 
 
     public Artist() {
@@ -63,11 +63,11 @@ public class Artist {
         this.origin = origin;
     }
 
-    public Collection<Album> getAlbums() {
+    public Set<Album> getAlbums() {
         return albums;
     }
 
-    public void setAlbums(Collection<Album> albums) {
+    public void setAlbums(Set<Album> albums) {
         this.albums = albums;
     }
 
