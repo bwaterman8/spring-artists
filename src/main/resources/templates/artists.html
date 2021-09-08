@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Artist List</title>
 </head>
 <body>
-
+    <h1>All Artists</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Albums</th>
+        </tr>
+        <tr th:each="artist : ${artists}">
+            <th th:text = ${artist.id}>2</th>
+            <th th:text = ${artist.name}>Kanye West</th>
+            <th th:text = ${artist.albums}>Graduation</th>
+        </tr>
+    </table>
 </body>
 </html>
