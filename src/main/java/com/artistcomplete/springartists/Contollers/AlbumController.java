@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AlbumController {
+
     private final AlbumRepository albumRepository;
 
     public AlbumController(AlbumRepository albumRepository) {
@@ -14,9 +15,11 @@ public class AlbumController {
     }
 
     @RequestMapping("/albums")
-    public String getAllAlbums(Model model) {
+    public String getAlbums(Model model) {
+
         model.addAttribute("albums", albumRepository.findAll());
 
         return "albums";
     }
+
 }
