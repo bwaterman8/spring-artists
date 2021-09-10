@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #FFA400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 98vw;
+    height: 98vh;
+    padding-top: 1em;
+    padding-left: 1em;
+    column-gap: 1em;
+}
+.main-bar {
+    border: solid 2px black;
+    background-color: #EAF6FF;
+
+}
+
+.main-bar-head {
+    background-color: #EAF6FF;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.main-bar-body {
+    border: solid 1px blue;
+
+}
+
+.side-bar {
+    border: solid 2px black;
+        background-color: #EAF6FF;
+}
+
+.side-bar-list {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    list-style: none;
+    margin-left: 2em;
+}
+
+.side-bar-artists {
+    background-color: #EAF6FF;
+    font-size: 2em;
+    line-height: 3em;
+}
+
+.side-bar-albums {
+    background-color: #EAF6FF;
+    font-size: 2em;
+    line-height: 3em;
+
+}
+
+.side-bar-songs {
+    background-color: #EAF6FF;
+    font-size: 2em;
+    line-height: 3em;
+
+}
