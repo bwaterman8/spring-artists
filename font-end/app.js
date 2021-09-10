@@ -1,3 +1,12 @@
+const express = require("express")
+const app = express()
+const cors = require("cors")
+app.use(
+    cors({
+        origin: "*",
+    })
+)
+
 import {
     renderMain
 } from './main-bar-component.js';
@@ -13,3 +22,4 @@ const displayHome = () => {
 }
 
 displayHome();
+
